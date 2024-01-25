@@ -6,6 +6,6 @@ if __name__ == "__main__":
         print("0")
     else:
         sum = 0
-        for i in range (1, num_arg + 1):
+        for i in range(1, num_arg + 1):
             sum = sum + int(argv[i])
     print("{}".format(sum))
