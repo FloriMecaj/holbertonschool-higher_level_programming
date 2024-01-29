@@ -1,0 +1,2 @@
+def square_matrix_simple(matrix=[]):
+    return [[el**2 for el in row]for row in matrix]
