@@ -2,6 +2,8 @@
 '''
 lookup obj
 '''
+
+
 def lookup(obj):
     '''
     return dir
