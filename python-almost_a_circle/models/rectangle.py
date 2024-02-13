@@ -9,7 +9,7 @@ class Rectangle(Base):
     """create class rectangle"""
     def __init__(self, width, height, x=0, y=0, id=None):
         """super get set"""
-        super().__init__(id, )
+        super().__init__(id)
 
         self.width = width
         self.height = height
