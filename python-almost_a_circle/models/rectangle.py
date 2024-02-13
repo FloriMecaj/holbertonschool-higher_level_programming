@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 """class rectangle that inherits from base"""
-from base import Base
+
+
+from .base import Base
 
 
 class Rectangle(Base):
