@@ -82,6 +82,7 @@ class Rectangle(Base):
                 )
 
     def update(self, *args):
+        """update method"""
         attributes = ['id', 'width', 'height', 'x', 'y']
         for attribute, value in zip(attributes, args):
             setattr(self, attribute, value)
