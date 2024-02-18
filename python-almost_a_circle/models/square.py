@@ -1,18 +1,21 @@
 #!/usr/bin/python3
-""""class square that inherits from rectangle"""
-
-
+'''Class Square inherits from Rectangle'''
 from .rectangle import Rectangle
 
 
 class Square(Rectangle):
-    """class square"""
+    '''Class Square'''
     def __init__(self, size, x=0, y=0, id=None):
-        """super method"""
+        '''Constructor'''
         super().__init__(size, size, x, y, id)
+
+    def __str__(self):
+        '''String representation'''
+        return f"[Square] ({self.id}) {self.x}/{self.y} - {self.width}"
 
     @property
     def size(self):
+        '''Size of this square'''
         return self.width
 
     @size.setter
@@ -20,24 +23,16 @@ class Square(Rectangle):
         self.width = value
         self.height = value
 
-    def __str__(self):
-        """__str__"""
-        return (f"[Square] ({self.id}) {self.x}/{self.y} - {self.width}")
-
     def update(self, *args, **kwargs):
-        """update method"""
-        attributes = ['id', 'size', 'x', 'y']
-        if args:
-            for attribute, value in zip(attributes, args):
-                setattr(self, attribute, value)
+        '''Update the square's attributes'''
+        if len(args) > 0:
+            attributes = ["id", "size", "x", "y"]
+            for i in range(len(args)):
+                setattr(self, attributes[i], args[i])
         else:
             for key, value in kwargs.items():
-                if key in attributes:
-                    setattr(self, key, value)
+                setattr(self, key, value)
 
     def to_dictionary(self):
-        """to dictionary"""
-        return {'id': self.id,
-                'size': self.size,
-                'x': self.x,
-                'y': self.y}
+        '''Return the dictionary representation of a square'''
+        return {"id": self.id, "size": self.width, "x": self.x, "y": self.y}
