@@ -1,2 +1,2 @@
 -- count
-SELECT COUNT FROM first_table
+SELECT COUNT(id) AS total_records FROM first_table
